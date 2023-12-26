@@ -1,7 +1,7 @@
 @extends('layouts/app')
 
 @section('titulo')
- DEVSTAGRAM Victor Cupa
+ Nuestros servicios
 @endsection
 
 @section('contenido')
