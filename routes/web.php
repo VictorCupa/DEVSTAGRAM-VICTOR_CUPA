@@ -17,13 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tienda',function(){
-    return view ('tienda');
-});
-
-Route::get('/nosotros',function(){
-    return view('nosotros');
-});
-Route::get('/contacto',function(){
-    return view('contacto');
+Route::get('/registro', function () {
+    return view('auth.registro');
 });

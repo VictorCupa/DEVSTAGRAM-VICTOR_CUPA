@@ -6,26 +6,28 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @vite('resources/css/app.css')
         <title>@yield('titulo')</title>
-        
     </head>
-    <body class="bg-gray-200" >
+
+    <body class="bg-gray-100" >
         <header class="p-5 border-b bg-white shadow-slate-700">
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="/contacto">Contactame</a>
-                <a href="/nosotros">Nosotros</a>
-                <a href="/tienda">Tienda</a>
-            </nav>
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-4xl font-extrabold ">
+                    @yield('titulo')
+                </h1>
+                <nav class="flex gap-3 items-center">
+                    <a class="font-bold uppercase text-red-950 text-sm" href="#">Login</a>
+                    <a class="font-bold uppercase text-red-950 text-sm" href="/registro">Registrate</a>
+                </nav>
+            </div>
         </header>
-        
-        <h1 class="text-4xl font-extrabold text-center ">
-            @yield('titulo')
-        </h1>
-        
-        <h2>
-            @yield('infopagina')
-        </h2>
-        <hr>
-        @yield('contenido')
+        <main class="container mx-auto mt-10">
+            <h2 class="font-black text-center text-3xl mb-10">
+                @yield('titulo')
+            </h2>
+            @yield('contenido')
+        </main>
+        <footer class="text-center p-5 text-gray-800 font-bold uppercase">
+            @yield('footer_contenido') 
+        </footer>
     </body>
 </html>
